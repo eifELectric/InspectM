@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title></title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="manifest" href="manifest.json">
+  </head>
+  <body class="darkmode">
+    <div id="toast-container" aria-live="assertive"></div>
+    <div class="container header">
+      <h1 id="titlePage"></h1>
+      <!--<input type="checkbox" id="theme-switch">-->
+      <div>
+        <!--<label for="languageSelect" id="langLabel"></label>-->
+        <select id="languageSelect">
+          <option value="de">Deutsch</option>
+          <option value="en">English</option>
+          <option value="zh">中文 (简体)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 id="titleFileUpload"></h2>
+      <input type="file" id="fileUpload" accept=".bmp" />
+    </div>
+
+    <div id="inspectorContainer" class="container ColGrid">
+      <div id="imageContainer">
+        <h2 id="titleImg"></h2>
+        <!--<img id="imgView" alt="" />-->
+        <canvas id="imgView"></canvas>
+      </div>
+
+      <div id="parameterContainer">
+        <h2 id="titleParameter"></h2>
+        <div class="parameter">
+          <label for="deviceType" id="deviceTypeLabel"></label>
+          <output id="deviceType"></output>
+        </div>
+        <div class="parameter">
+          <label for="fileVersion" id="fileVersionLabel"></label>
+          <output id="fileVersion"></output>
+        </div>
+        <div class="parameter">
+          <label for="unit" id="unitLabel"></label>
+          <!--<output id="unit"></output>-->
+          <select id="unitSelect">
+            <option value="1">Celsius</option>
+            <option value="2">Fahrenheit</option>
+            <option value="3">Kelvin</option>
+          </select>
+        </div>
+        <div class="parameter">
+          <label for="lowestTemp" id="lowestTempLabel"></label>
+          <output id="lowestTemp"></output>
+        </div>
+        <div class="parameter">
+          <label for="highestTemp" id="highestTempLabel"></label>
+          <output id="highestTemp"></output>
+        </div>
+        <div class="parameter">
+          <label for="markedPosition" id="markedPositionLabel"></label>
+          <output id="markedPosition">X:<span id="markedPositionX"></span> Y:<span id="markedPositionY"></span></output>
+        </div>
+        <div class="parameter">
+          <label for="positionTemp" id="positionTempLabel"></label>
+          <output id="positionTemp"></output>
+        </div>
+      </div>
+    </div>
+    
+    <script src="locals/translations.js"></script>
+    <script src="src/image-viewer.js"></script>
+    <script src="src/file-handler.js"></script>
+    <script src="src/toast.js"></script>
+    <script src="src/i18n.js"></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>
