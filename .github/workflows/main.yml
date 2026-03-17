@@ -1,0 +1,4 @@
+# InspectM
+- uses: tauri-apps/tauri-action@v0
+  with:
+    args: --target x86_64-pc-windows-msvc
