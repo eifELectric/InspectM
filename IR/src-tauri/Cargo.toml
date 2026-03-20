@@ -1,6 +1,6 @@
 [package]
 name = "InspectIR"
-version = "0.1.0"
+version = "0.2.0"
 description = "Inspect IR for Tooltop by eifelectric"
 authors = ["Michael Gerhards"]
 license = "Apache-2.0 license"
