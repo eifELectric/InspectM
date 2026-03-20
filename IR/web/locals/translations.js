@@ -43,7 +43,7 @@ const translations = {
     positionTempLabel: "Temperature at marked position: ",
     markedPositionLabel: "Marked position: "
   },
-  zh {
+  zh: {
     titlePage: "红外图像检测器",
     titleFileUpload: "上传文件",
     titleParameter: "参数",
