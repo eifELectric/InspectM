@@ -1,5 +1,5 @@
 [package]
-name = "Inspect IR"
+name = "InspectIR"
 version = "0.1.0"
 description = "Inspect IR for Tooltop by eifelectric"
 authors = ["Michael Gerhards"]
