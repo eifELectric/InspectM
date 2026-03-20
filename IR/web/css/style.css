@@ -34,12 +34,15 @@ body {
   min-height: 100vh;
   min-width: 700px;
   max-width: 900px;
-  font-family: Arial, sans-serif;
   padding: 1rem;
   margin: auto;
   background-color: var(--base-color);
   color: var(--text-color);
   transition: background 0.3s ease, color 0.3s ease;
+
+  font-family: Arial, sans-serif;
+  /* verhindert Zoom auf iOS */
+  font-size: 16px;
 }
 
 .container {
@@ -65,15 +68,34 @@ h3 {
   /*flex-direction: row-reverse;*/
 }
 
-input[type="search"],
 select {
+  -webkit-appearance: none;
+  appearance: none;
+
+  height: 25px; /* wichtig: feste Höhe */
+  padding: 0px 4px;
+
   background-color: var(--primary-color);
   color: var(--text-color); 
   border: 1px solid var(--secondary-color);
-  padding: 6px;
+  
   border-radius: 4px;
   outline: none;
   transition: background 0.3s ease, color 0.3s ease;
+
+  border-radius: 4px;
+
+  box-sizing: border-box;
+
+  width: auto;
+  min-width: 90px; /* Default */
+  max-width: 300px;
+
+  /* eigener Pfeil */
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 20 20' stroke='white' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'><polyline points='6 8 10 12 14 8'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0px center;
+  background-size: 16px;
 }
 
 input[type="file"]::file-selector-button:focus,
@@ -96,30 +118,17 @@ input[type="file"]::file-selector-button {
   background-color: var(--primary-color);
   color: var(--text-color);
   border: 1px solid var(--secondary-color);
-  padding: 6px;
+  padding: 4px;
   border-radius: 4px;
   transition: background-color 0.3s, border-color 0.3s;
   margin-right: 10px;
 }
-
 
 .parameter {
   margin-bottom: 10px;
 }
 .parameter label {
   margin-right: 5px;
-}
-
-
-/* Image Viewer */
-#imgView {
-  /*max-width: 100%;
-  height: auto;*/
-  width:480px;
-  height:640px;
-}
-#imgView:hover {
-  cursor: crosshair
 }
 
 
@@ -177,3 +186,17 @@ input[type="file"]::file-selector-button {
 @keyframes toast-out{
   to{opacity:0; transform:translateY(10px)}
 }
+
+
+/* Image Viewer */
+#imgView {
+  /*max-width: 100%;
+  height: auto;*/
+  width:480px;
+  height:640px;
+}
+#imgView:hover {
+  cursor: crosshair
+}
+
+

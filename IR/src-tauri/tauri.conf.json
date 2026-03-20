@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "inspectir",
+  "productName": "Inspect IR",
   "version": "0.1.0",
   "identifier": "com.eifelectric.inspectir",
   "build": {
@@ -10,7 +10,7 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "inspectir",
+        "title": "Inspect IR",
         "width": 1200,
         "height": 900
       }
