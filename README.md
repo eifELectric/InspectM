@@ -19,3 +19,13 @@ Inspect measurement data from [TOOLTOP thermal imaging cameras](https://tooltop.
 
 ## Sample
 ![IR Picture](IR/docs/images/ir-inspector-celsius.png)
+
+## Supported Platforms
+**Desktop-/Mobile-Application** available on:
+ - Windows
+ - macOS
+ - Linux
+ - Android (coming soon)
+ - iOS (coming soon)
+
+Also available as a **Progressive Web App (PWA)** on all browsers that support PWAs, across all platforms, or as a **self-hosted/local web application**.
