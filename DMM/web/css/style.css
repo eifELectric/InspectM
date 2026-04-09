@@ -1,0 +1,237 @@
+:root{
+  --base-color: white;
+  --base-variant: #e8e9ed;
+  --text-color: #111528;
+  --secondary-text: #232738;
+  --primary-color: #b0b3be;
+  --secondary-color: #d7d9de;
+  --accent-color: #0071ff;
+  --chart-line-color: #0000FF;
+  color-scheme: light;
+}
+.darkmode{
+  --base-color: #070b1d;
+  --base-variant: #101425;
+  --text-color: #ffffff;
+  --secondary-text: #a4a5b8;
+  --primary-color: #3a435d;
+  --secondary-color: #4d556d;
+  --accent-color: #0071ff;
+  --chart-line-color: #FFFF00;
+  color-scheme: dark;
+}
+
+/* Systemseitigen Dark Mode unterstützen */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--base-color);
+    color: var(--text-color);
+  }
+}
+
+
+body {
+  min-height: 100vh;
+  min-width: 700px;
+  max-width: 900px;
+  padding: 1rem;
+  margin: auto;
+  background-color: var(--base-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+
+  font-family: Arial, sans-serif;
+  /* verhindert Zoom auf iOS */
+  font-size: 16px;
+}
+
+.container {
+  margin: 20px 0 0 0;
+}
+h1,
+h2,
+h3 {
+  margin: 0 0 6px 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+} 
+
+.ColGrid {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  /*flex-direction: row-reverse;*/
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+
+  height: 25px; /* wichtig: feste Höhe */
+  padding: 0px 4px;
+
+  background-color: var(--primary-color);
+  color: var(--text-color); 
+  border: 1px solid var(--secondary-color);
+  
+  border-radius: 4px;
+  outline: none;
+  transition: background 0.3s ease, color 0.3s ease;
+
+  border-radius: 4px;
+
+  box-sizing: border-box;
+
+  width: auto;
+  min-width: 90px; /* Default */
+  max-width: 300px;
+
+  /* eigener Pfeil */
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 20 20' stroke='white' fill='none' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'><polyline points='6 8 10 12 14 8'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0px center;
+  background-size: 16px;
+}
+
+input[type="file"]::file-selector-button:focus,
+select:focus {
+  border-color: var(--accent-color);
+}
+
+input[type="file"]::file-selector-button:hover,
+select:hover {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+}
+
+select option {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+input[type="file"]::file-selector-button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: 1px solid var(--secondary-color);
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.3s, border-color 0.3s;
+  margin-right: 10px;
+}
+
+.parameter {
+  margin-bottom: 10px;
+}
+.parameter label {
+  margin-right: 5px;
+}
+
+
+/* Toast Alerts */
+.toast-container{
+  position:fixed;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  z-index:10000;
+}
+
+.toast-container.top-right{ top:20px; right:20px; }
+.toast-container.bottom-right{ bottom:20px; right:20px; }
+.toast-container.bottom-left{ bottom:20px; left:20px; }
+.toast-container.top-left{ top:20px; left:20px; }
+
+.toast{
+  min-width:240px;
+  background:#333;
+  color:white;
+  padding:12px 14px;
+  border-radius:8px;
+  font-family:sans-serif;
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
+  cursor:pointer;
+  overflow:hidden;
+  transform:translateY(10px);
+  opacity:0;
+  animation:toast-in .2s forwards;
+}
+
+.toast.success{ background:#2e7d32; }
+.toast.error{ background:#c62828; }
+.toast.info{ background:#1976d2; }
+
+.toast.closing{
+  animation:toast-out .2s forwards;
+}
+
+.toast-progress{
+  position:absolute;
+  bottom:0;
+  left:0;
+  height:3px;
+  background:rgba(255,255,255,.7);
+  width:100%;
+  transform-origin:left;
+}
+
+@keyframes toast-in{
+  to{opacity:1; transform:translateY(0)}
+}
+
+@keyframes toast-out{
+  to{opacity:0; transform:translateY(10px)}
+}
+
+
+/* Chart */
+.chart-wrapper {
+  width: 800px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  min-width: 0;
+}
+
+#chart {
+  width: 100%;
+  /*height: 100vh; volle Viewport-Höhe */
+}
+
+.uplot {
+  display: block;
+  width: 800px;
+}
+
+.u-axis {
+  pointer-events: none;
+}
+
+.u-select {
+  pointer-events: all;
+  cursor: grabbing;
+  background: rgba(255,255,255,0.10);
+}
+
+.u-grip-l {
+  position: absolute;
+  left: -5px;
+  width: 10px;
+  height: 100%;
+  background: grey;
+  cursor: ew-resize;
+}
+
+.u-grip-r {
+  position: absolute;
+  right: -5px;
+  width: 10px;
+  height: 100%;
+  background: grey;
+  cursor: ew-resize;
+}
+
+

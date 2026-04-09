@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title></title>
+
+  <link rel="stylesheet" href="public/uplot/uPlot.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="manifest" href="manifest.json">
+  
+  <script src="public/uplot/uPlot.iife.min.js"></script>
+  
+    <!-- Standard-Favicon -->
+    <link rel="icon" href="img/favicon.ico" sizes="any">
+
+    <!-- PNG-Versionen -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
+    <!-- Apple Touch Icon -->
+    <link rel="icon" sizes="180x180" href="img/icon-180x180.png">
+
+    <!-- Android / PWA -->
+    <link rel="icon" type="image/png" sizes="192x192" href="img/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/icon-512x512.png">
+</head>
+<body class="darkmode">
+  <div id="toast-container" aria-live="assertive"></div>
+  <div class="container header">
+    <h1 id="titlePage"></h1>
+    <!--<input type="checkbox" id="theme-switch">-->
+    <div>
+      <!--<label for="languageSelect" id="langLabel"></label>-->
+      <select id="languageSelect">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="zh">中文 (简体)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 id="titleFileUpload"></h2>
+    <input type="file" id="fileUpload" accept=".vom" />
+  </div>
+
+  <div class="container">
+    <h2 id="titleParameter"></h2>
+    <div class="parameter">
+      <label for="deviceType" id="deviceTypeLabel"></label>
+      <output id="deviceType"></output>
+    </div>
+    <div class="parameter">
+      <label for="fileVersion" id="fileVersionLabel"></label>
+      <output id="fileVersion"></output>
+    </div>
+    <div class="parameter">
+      <label for="mode" id="modeLabel"></label>
+      <output id="mode"></output>
+    </div>
+    <div class="parameter">
+      <label for="sampleInterval" id="sampleIntervalLabel"></label>
+      <output id="sampleInterval"></output>
+    </div>
+  </div>
+  
+  <div class="container chartWrapper">
+    <h2 id="titleChart"></h2>
+    <div id="chart"></div>
+  </div>
+
+  <script src="locals/translations.js"></script>
+  <script src="src/file-handler.js"></script>
+  <script src="src/chart.js"></script>
+  <script src="src/toast.js"></script>
+  <script src="src/i18n.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
