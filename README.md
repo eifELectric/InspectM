@@ -20,6 +20,8 @@ Inspect measurement data from [TOOLTOP thermal imaging cameras](https://tooltop.
 ## Sample
 ![IR Picture](IR/docs/images/ir-inspector-celsius.png)
 
+![DMM Picture](DMM/docs/images/dmm-inspector-voltage.png)
+
 ## Supported Platforms
 **Desktop-/Mobile-Application** available on:
  - Windows
@@ -28,4 +30,12 @@ Inspect measurement data from [TOOLTOP thermal imaging cameras](https://tooltop.
  - Android (coming soon)
  - iOS (coming soon)
 
-Also available as a **Progressive Web App (PWA)** on all browsers that support PWAs, across all platforms, or as a **self-hosted/local web application**.
+Also available as a **self-hosted/local web application** or as a **Progressive Web App (PWA)** on all browsers that support PWAs, across all platforms.
+
+## Downloads/Hosting
+WebApp:
+ https://eifelectric.github.io/InspectM/IR
+ https://eifelectric.github.io/InspectM/DMM
+
+Binaries:
+ https://github.com/eifELectric/InspectM/releases
