@@ -33,9 +33,9 @@ Inspect measurement data from [TOOLTOP thermal imaging cameras](https://tooltop.
 Also available as a **self-hosted/local web application** or as a **Progressive Web App (PWA)** on all browsers that support PWAs, across all platforms.
 
 ## Downloads/Hosting
-WebApp:
- https://eifelectric.github.io/InspectM/IR
- https://eifelectric.github.io/InspectM/DMM
+WebApp:\
+ - https://eifelectric.github.io/InspectM/IR
+ - https://eifelectric.github.io/InspectM/DMM
 
-Binaries:
- https://github.com/eifELectric/InspectM/releases
+Binaries:\
+ - https://github.com/eifELectric/InspectM/releases
