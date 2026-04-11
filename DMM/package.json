@@ -2,8 +2,9 @@
   "name": "InspectDMM",
   "private": true,
   "scripts": {
-    "tauri:dev": "tauri dev",
-    "tauri:build": "tauri build"
+    "tauri": "tauri",
+    "dev": "tauri dev",
+    "build": "tauri build"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2.10.1"
