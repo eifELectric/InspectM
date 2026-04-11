@@ -1,7 +1,7 @@
 # InspectM
 Inspect measurement data from [TOOLTOP thermal imaging cameras](https://tooltop.pro/de/thermal-imagers).
 
-## How to Use
+## How to Use InspectM IR
 
 ### Get Temperature Information
 1. Open a BMP file from a Tooltop infrared camera or Multitool.
@@ -17,10 +17,25 @@ Inspect measurement data from [TOOLTOP thermal imaging cameras](https://tooltop.
 2. Choose your preferred language.  
    Currently, German, English, and simplified Chinese are supported.
 
-## Sample
+### Sample
 ![IR Picture](IR/docs/images/ir-inspector-celsius.png)
 
+
+## How to Use InspectM DMM
+
+### Zoom-In/-Out
+Zoom in by mark area
+
+Zoom out by double clicking the chart
+
+### Change Language
+1. Click on the language dropdown.
+2. Choose your preferred language.  
+   Currently, German, English, and simplified Chinese are supported.
+
+### Sample
 ![DMM Picture](DMM/docs/images/dmm-inspector-voltage.png)
+
 
 ## Supported Platforms
 **Desktop-/Mobile-Application** available on:
@@ -33,9 +48,9 @@ Inspect measurement data from [TOOLTOP thermal imaging cameras](https://tooltop.
 Also available as a **self-hosted/local web application** or as a **Progressive Web App (PWA)** on all browsers that support PWAs, across all platforms.
 
 ## Downloads/Hosting
-WebApp:\
+WebApp:
  - https://eifelectric.github.io/InspectM/IR
  - https://eifelectric.github.io/InspectM/DMM
 
-Binaries:\
+Binaries:
  - https://github.com/eifELectric/InspectM/releases
