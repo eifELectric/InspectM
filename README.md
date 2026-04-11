@@ -47,7 +47,7 @@ Zoom out by double clicking the chart
 
 Also available as a **self-hosted/local web application** or as a **Progressive Web App (PWA)** on all browsers that support PWAs, across all platforms.
 
-## Downloads/Hosting
+## Download/Hosting Links
 WebApp:
  - https://eifelectric.github.io/InspectM/IR
  - https://eifelectric.github.io/InspectM/DMM
